@@ -15,7 +15,7 @@ on:
 
 env:                      # 环境变量
   MHZ: 1100               # CPU超频频率 必须为20的倍数。开启超频请修改124行超频选项
-  TNAME: K2P           # 配置文件名  https://github.com/hanwckf/rt-n56u/tree/master/trunk/configs/templates
+  TNAME: XZB           # 配置文件名  https://github.com/hanwckf/rt-n56u/tree/master/trunk/configs/templates
   BUILD_VERSION: hanwckf  # hanwckf 或者 chongshengB
   FILE_PATH: /opt/images
 
@@ -39,7 +39,7 @@ jobs:
 
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/$BUILD_VERSION/rt-n56u.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/wanghf1981/rt-n56u.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
